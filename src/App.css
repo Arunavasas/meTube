@@ -1,0 +1,479 @@
+/* NAvbar */
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --back-color: rgb(255, 255, 255);
+  --text-color: rgb(43, 40, 40);
+}
+body {
+  overflow-x: hidden;
+  background-color: var(--back-color);
+  transition: 0.7s all;
+}
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap");
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--back-color);
+  align-items: center;
+  overflow-x: hidden;
+  height: 60px;
+  border-bottom: 0.5px solid rgba(128, 128, 128, 0.151);
+  padding-left: 50px;
+  z-index: +5555;
+}
+.logo {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-family: "Barlow Condensed", sans-serif;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.searchbar-container {
+  width: 60vw;
+  height: max-content;
+  margin-left: 50px;
+}
+.searchbar {
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.searchbar input {
+  padding-left: 5px;
+  width: 60%;
+  height: 29px;
+  background-color: var(--back-color);
+  color: var(--text-color);
+  border: 1px solid grey;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.searchbar input:focus {
+  border: 1px solid dodgerblue;
+  outline: none;
+  box-shadow: -5px 11px 19px -17px rgba(33, 29, 29, 0.75) inset;
+  -webkit-box-shadow: -5px 11px 19px -17px rgba(33, 29, 29, 0.75) inset;
+  -moz-box-shadow: -5px 11px 19px -17px rgba(33, 29, 29, 0.75) inset;
+}
+.searchbar button {
+  height: 31px;
+  width: 60px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  background-color: var(--back-color);
+  transition: 0.7s all;
+}
+.searchbar button i {
+  color: var(--text-color);
+  font-size: 1.2em;
+}
+.searchbar button:hover {
+  background-color: rgba(128, 128, 128, 0.459);
+}
+
+.theme {
+  display: flex;
+  justify-content: flex-start;
+  width: 50px;
+  height: 25px;
+  border-radius: 20px;
+  background-color: var(--text-color);
+  align-items: center;
+  transition: justify-content 2s;
+  cursor: pointer;
+}
+
+.theme .circle {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  color: var(--text-color);
+  border: 2px solid grey;
+}
+.react-loading-skeleton {
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+.skel {
+  width: 296px;
+  height: 296px;
+  display: inline;
+  margin-right: 20px;
+}
+.fa-moon {
+  color: rgb(243, 177, 199);
+  font-size: 1.2em;
+}
+/* HOME STYLESHEET */
+.main-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  margin-top: 60px;
+}
+.sidebar {
+  width: 231px;
+  height: 100vh;
+  background-color: var(--back-color);
+  border-right: 1px solid grey;
+  overflow: hidden;
+}
+.cont {
+  padding-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  font-size: large;
+  border-bottom: 1px rgba(128, 128, 128, 0.301) solid;
+  font-weight: 500;
+}
+.cont i {
+  font-size: x-large;
+}
+.cont a {
+  margin-bottom: 20px;
+  font-size: 0.8em;
+}
+.cont a div {
+  display: inline;
+  margin-left: 30px;
+}
+.flex {
+  width: 85%;
+  height: 100vh;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.card {
+  width: 276px;
+  height: 276px;
+  margin-left: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.image {
+  width: fit-content;
+  height: fit-content;
+}
+.image img {
+  width: 276px;
+  height: 192px;
+
+  object-fit: fill;
+}
+.lowertext {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  color: var(--text-color);
+}
+.lowertext p {
+  width: 100%;
+}
+.title,
+.vtitle {
+  width: 100%;
+  color: var(--text-color);
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* VIDEO SECTION */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+.mainarea {
+  width: 90vw;
+  margin: auto;
+  display: none;
+  flex-direction: row;
+  margin-top: 100px;
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+}
+
+.videosection {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  flex-shrink: inherit;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  width: 90%;
+}
+.vtitle {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.views {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  flex-wrap: wrap;
+  width: 85%;
+  border-bottom: 1px solid grey;
+}
+.views .viewsnumber {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: grey;
+  font-size: 0.95em;
+}
+
+.like i {
+  margin-right: 10px;
+  font-size: 1.1em;
+}
+.channel {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+.avatar img {
+  width: 50px;
+  height: 50px;
+}
+
+.subs {
+  margin-left: 15px;
+}
+.channelName {
+  font-family: "Poppins", sans-serif;
+  font-weight: 550;
+  font-size: 0.95em;
+}
+.subcount {
+  font-family: sans-serif;
+  font-size: 0.8em;
+  margin-top: 2px;
+}
+.discription {
+  margin-top: 10px;
+  width: 100%;
+  height: 60px;
+  overflow-y: hidden;
+}
+.dis-t {
+  font-family: "Poppins", sans-serif;
+  font-weight: 550;
+}
+.discription .dis {
+  margin-top: 10px;
+  padding-bottom: 100px;
+  width: 100%;
+  word-wrap: break-word;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+.suggestion {
+  width: 30vw;
+  margin-left: 20px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.sinfo {
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.schannel {
+  margin-top: 8px;
+  font-size: 0.8em;
+}
+.sview {
+  font-size: 0.8em;
+}
+.more {
+  color: var(--text-color);
+  margin-top: 20px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+.more:hover {
+  color: rgb(212, 0, 0);
+}
+
+.fa-sun {
+  color: yellow;
+  font-size: 1.2em;
+}
+.video {
+  width: 100%;
+}
+.select {
+  display: none;
+}
+
+.simage {
+  width: 180px;
+}
+.simage img {
+  width: 180px;
+}
+.download {
+  width: 110px;
+  height: 40px;
+  background-color: var(--text-color);
+  color: var(--back-color);
+  border-radius: 20px;
+  cursor: pointer;
+  border: 1px solid var(--text-color);
+  transition: 0.7s all;
+}
+
+.download:hover {
+  opacity: 0.8;
+}
+/* ResponsiveNess */
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    padding-left: 10px;
+    width: 100vw;
+
+    justify-content: space-between;
+  }
+  .theme {
+    display: none;
+  }
+
+  .searchbar-container {
+    margin-right: 10px;
+  }
+  .sidebar {
+    display: none;
+  }
+  .mainarea {
+    flex-direction: column;
+    width: 100vw;
+    margin: 0;
+    margin-top: 100px;
+  }
+  .flex {
+    margin-left: 0;
+    width: 100vw;
+
+    justify-content: center;
+  }
+  .video {
+    width: 100%;
+    height: 240px;
+  }
+
+  .videosection {
+    width: 100%;
+  }
+  .like {
+    margin-top: 15px;
+  }
+  .info {
+    margin-left: 15px;
+  }
+  .suggestion {
+    margin: 0;
+    width: 90vw;
+    border-top: 1px solid grey;
+  }
+  .container {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .simage {
+    width: 100vw;
+    height: 200px;
+  }
+  .simage img {
+    width: 100%;
+    height: 100%;
+  }
+  .stitle {
+    font-size: 1em;
+  }
+  .sinfo {
+    width: 100vw;
+  }
+  /* 
+  .select {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 50px;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  .details,
+  .related {
+    margin-left: 15px;
+    display: flex;
+    width: 90px;
+    height: 30px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    color: var(--back-color);
+    border: 1px solid grey;
+    background-color: var(--text-color);
+  }
+  .active {
+    color: var(--back-color);
+    background-color: var(--text-color);
+  }
+  .inactive {
+    color: var(--text-color);
+    background-color: var(--back-color);
+  } */
+
+  .theme {
+    margin-right: 15px;
+  }
+  .css-gdumlo-SkeletonTheme {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
